@@ -19,17 +19,20 @@ function App() {
           <img id='opera' src="/opera.png" alt="" />
         </div>
         <Canvas
-          id='canvas-elem'
-          style={{
-            height: "100vh",
-            width: "100vw",
-            position: "fixed",
-            top: 0,
-            left: 0,
-            zIndex: 1,
-          }} >
-          <Dog/>
-        </Canvas>
+  id="canvas-elem"
+  camera={{ position: [0, 0, 0.55] }}
+  dpr={[1, 1.5]}
+  gl={{ antialias: false }}
+  style={{
+    height: "100vh",
+    width: "100%",   // 🔥 100vw remove
+    position: "fixed",
+    inset: 0,        // cleaner than top/left
+    zIndex: 1,
+  }}
+>
+  <Dog />
+</Canvas>
         <section id='section-1' >
           <nav>
             <div className="nav-elem">

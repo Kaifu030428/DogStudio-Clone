@@ -81,7 +81,7 @@ section {
     }
 
     h1 {
-      font-size: 5rem;
+      font-size:lamp(2rem, 6vw, 5rem);
       line-height: 0.8;
       text-align: right;
     }
@@ -108,7 +108,8 @@ section {
   }
 
   .first-line {
-    width: 35rem;
+    width: 100%;
+    max-width: 35rem;
     background-color: rgba(255, 0, 0, 0.396);
     height: 1px;
     position: absolute;
@@ -132,7 +133,7 @@ section {
   .titles {
     display: flex;
     flex-direction: column;
-    padding-left: 17rem;
+    padding-left: 5vw;
     margin-block: 10rem;
 
     .title {
@@ -220,4 +221,43 @@ main:has(#section-2 .title[img-title="kennedy"]:hover) .images #kennedy {
 main:has(#section-2 .title[img-title="opera"]:hover) .images #opera {
   opacity: 1;
   background-color: rgb(176, 4, 4);
+}
+
+@media (max-width: 768px) {
+
+  #section-1 .middle {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  #section-1 .middle .left,
+  #section-1 .middle .right {
+    width: 100%;
+    text-align: center;
+  }
+
+  #section-1 h1 {
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  #section-1 .bottom {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  #section-1 .bottom .left,
+  #section-1 .bottom .right {
+    width: 100%;
+  }
+
+  #section-2 .titles {
+    padding-left: 2rem;   /* 17rem hata diya */
+    margin-block: 5rem;
+  }
+
+  #section-2 .title h1 {
+    font-size: 2rem;
+  }
+
 }
