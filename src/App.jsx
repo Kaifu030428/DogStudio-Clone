@@ -24,7 +24,7 @@ function App() {
   dpr={[1, 1.5]}
   gl={{ antialias: false }}
   style={{
-    height: "100vh",
+    height: "100dvh",
     width: "100%",   // 🔥 100vw remove
     position: "fixed",
     inset: 0,        // cleaner than top/left
